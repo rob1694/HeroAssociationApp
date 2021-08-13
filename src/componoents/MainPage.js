@@ -10,7 +10,6 @@ function MainPage() {
     return (
         <div>
             <TitleContainer/>
-            <LeagueForm/>
             <LeaguesContainer/>
         </div>
     )

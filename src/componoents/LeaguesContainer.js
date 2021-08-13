@@ -1,6 +1,7 @@
 import React from 'react'
 import IndividualLeague from './IndividualLeague'
 import { useState, useEffect } from 'react'
+import LeagueForm from './LeagueForm';
 
 function LeagueContainer() {
 
@@ -12,6 +13,9 @@ function LeagueContainer() {
           .then((json) => setLeagues(json))
         }, []);
 
+        function addLeague(league) {
+            setLeagues([...leagues, league]);
+          }
 
     const showLeagues = leagues.map((league) => (
         <IndividualLeague
@@ -23,6 +27,9 @@ function LeagueContainer() {
     return (
         <div>
             <h2>Leagues Container</h2>
+            <LeagueForm 
+            league = {addLeague}
+            />
             {showLeagues}
         </div>
     )

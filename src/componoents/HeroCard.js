@@ -1,11 +1,15 @@
 import React from 'react'
 
-function HeroCard() {
+function HeroCard( {hero} ) {
+
+    const {name, description, rank, abilities, img_url} = hero
     return (
       <div>
-        <h4>Hero Card </h4>
-        <h4>Hero Card </h4>
-        <h4>Hero Card </h4>
+        <h4>Name: {name}</h4>
+        <p>Description: {description}</p>
+        <p>Abilities: {abilities}</p>
+        <p>Rank: {rank}</p>
+        <img alt = {name} src = {img_url}/>
      </div>
     );
   }

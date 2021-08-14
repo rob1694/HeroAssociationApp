@@ -26,9 +26,7 @@ function LeagueContainer() {
 
     return (
         <div>
-            <LeagueForm 
-            onAddleague = {addLeague}
-            />
+            <LeagueForm onAddleague = {addLeague}/>
             <h3>Current Leagues</h3>
             {showLeagues}
         </div>

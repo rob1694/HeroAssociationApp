@@ -21,8 +21,20 @@ function LeagueContainer() {
         <IndividualLeague
           key = {league.id}
           league = {league}
+          deleteLeague = {deleteLeague}
         />
       ));
+
+      function deleteLeague(leagueId) {
+        const newURL = `${'http://127.0.0.1:9393/leagues'}/${leagueId}`;
+        const config = { method: "DELETE" };
+        fetch(newURL, config)
+          .then(r => r.json())
+          .then(() => {
+            const deleteLeagues = leagues.filter(league => league.id !== leagueId);
+           setLeagues(deleteLeagues)
+          })
+      }
 
     return (
         <div>

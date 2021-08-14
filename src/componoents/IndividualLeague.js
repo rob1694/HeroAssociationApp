@@ -3,7 +3,7 @@ import HeroForm from './HeroForm';
 import HeroCard from './HeroCard';
 import { useState, useEffect } from 'react'
 
-function IndividualLeagues( {league} ) {
+function IndividualLeagues( {league, deleteLeague} ) {
 
   const [heroes, setHeroes] = useState([]);
   const {id, name, description, img_url} = league
@@ -18,6 +18,9 @@ function IndividualLeagues( {league} ) {
       setHeroes([...heroes, hero]);
       }
 
+      function handleDeleteLeague () {
+        deleteLeague(id)
+      }
 
   const showHeroes = heroes.map(hero => {
     if (hero.league_id === id) {
@@ -39,6 +42,7 @@ function IndividualLeagues( {league} ) {
       <h3>{name}</h3>
       <p>{description}</p>
       <img alt = {name} src = {img_url} />
+      <button onClick = {handleDeleteLeague}>DELETE</button>
       
       <HeroForm onAddHero = {addHero} leagueId = {id}/>
       {showHeroes}

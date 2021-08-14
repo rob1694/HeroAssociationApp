@@ -14,9 +14,9 @@ function IndividualLeagues( {league} ) {
       .then((json) => setHeroes(json))
     }, []);
 
-    // function addHero(hero) {
-    //   setHeroes([...heroes, hero]);
-    //   }3
+    function addHero(hero) {
+      setHeroes([...heroes, hero]);
+      }
 
 
   const showHeroes = heroes.map(hero => {
@@ -40,7 +40,7 @@ function IndividualLeagues( {league} ) {
       <p>{description}</p>
       <img alt = {name} src = {img_url} />
       
-      <HeroForm/>
+      <HeroForm onAddHero = {addHero} leagueId = {id}/>
       {showHeroes}
    </div>
   );

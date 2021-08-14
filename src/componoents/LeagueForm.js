@@ -22,7 +22,7 @@ function clearForm() {
     setFormData({
       title: "",
       description: "",
-      img: "",
+      img: ""
     })
   }
 
@@ -52,9 +52,9 @@ function clearForm() {
       <div>
           <h3>Register League</h3>  
             <form onSubmit = {handleSubmit}>
-               <input name = "name" placeholder= "Name" value = {formData.name} onChange = {handleChange}/>
-               <input name = "decription" placeholder= "Description" value = {formData.description} onChange = {handleChange}/>
-               <input name = "img" placeholder= "Img Url" value = {formData.img} onChange = {handleChange}/>
+               <input name = "name" placeholder = "Name" value = {formData.name} onChange = {handleChange}/>
+               <input name = "description" placeholder = "Description" value = {formData.description} onChange = {handleChange}/>
+               <input name = "img" placeholder = "Img Url" value = {formData.img} onChange = {handleChange}/>
                <button> Submit </button>
             </form>
       </div>

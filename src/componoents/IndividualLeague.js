@@ -8,11 +8,11 @@ function IndividualLeagues( {league} ) {
 
   return (
     <div>
+      <img alt = {name} src = {img_url} />
       <h3>{name}</h3>
       <p>{description}</p>
-      <div>
-        <img alt = {name} src = {img_url} />
-      </div>
+      <img alt = {name} src = {img_url} />
+      
       <HeroForm/>
       <HeroCard/>
    </div>

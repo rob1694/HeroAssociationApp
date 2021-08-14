@@ -27,7 +27,7 @@ function clearForm() {
   }
 
   function handleSubmit(e) {
-    e.preventDefault();
+    // e.preventDefault();
 
     const newLeague = {
         name: formData.name,
@@ -50,7 +50,7 @@ function clearForm() {
 
   return (
       <div>
-          <h3>Form</h3>  
+          <h3>Register League</h3>  
             <form onSubmit = {handleSubmit}>
                <input name = "name" placeholder= "Name" value = {formData.name} onChange = {handleChange}/>
                <input name = "decription" placeholder= "Description" value = {formData.description} onChange = {handleChange}/>

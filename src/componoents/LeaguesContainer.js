@@ -26,10 +26,10 @@ function LeagueContainer() {
 
     return (
         <div>
-            <h2>Leagues Container</h2>
             <LeagueForm 
-            league = {addLeague}
+            onAddleague = {addLeague}
             />
+            <h3>Current Leagues</h3>
             {showLeagues}
         </div>
     )

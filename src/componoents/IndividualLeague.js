@@ -14,6 +14,17 @@ function IndividualLeagues( {league, deleteLeague} ) {
       .then((json) => setHeroes(json))
     }, []);
 
+    function deleteHero(heroId) {
+      const newURL = `${'http://127.0.0.1:9393/heros'}/${heroId}`;
+      const config = { method: "DELETE" };
+      fetch(newURL, config)
+        .then(r => r.json())
+        .then(() => {
+          const deleteHeroes = heroes.filter(hero => hero.id !== heroId);
+         setHeroes(deleteHeroes)
+        })
+    }
+
     function addHero(hero) {
       setHeroes([...heroes, hero]);
       }
@@ -28,6 +39,7 @@ function IndividualLeagues( {league, deleteLeague} ) {
     <HeroCard
     key = {hero.id}
     hero = {hero}
+    deleteHero = {deleteHero}
     />
         )
       }
@@ -42,7 +54,7 @@ function IndividualLeagues( {league, deleteLeague} ) {
       <h3>{name}</h3>
       <p>{description}</p>
       <img alt = {name} src = {img_url} />
-      <button onClick = {handleDeleteLeague}>DELETE</button>
+      <button onClick = {handleDeleteLeague}>DELETE League</button>
       
       <HeroForm onAddHero = {addHero} leagueId = {id}/>
       {showHeroes}

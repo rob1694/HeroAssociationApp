@@ -36,6 +36,9 @@ function LeagueContainer() {
           })
       }
 
+      // debug deleting heroes along with league when clicked
+      // or create un unspecified League section of Heros
+
     return (
         <div>
             <LeagueForm onAddleague = {addLeague}/>

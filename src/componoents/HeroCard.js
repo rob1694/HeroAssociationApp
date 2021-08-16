@@ -8,14 +8,16 @@ function handleDeleteHero() {
 
     const {name, description, rank, abilities, img_url} = hero
     return (
-      <div>
-        <h4>Name: {name}</h4>
-        <p>Description: {description}</p>
-        <p>Abilities: {abilities}</p>
-        <p>Rank: {rank}</p>
-        <img alt = {name} src = {img_url}/>
+      <div  >
+        <img class="character" alt = {name} src = {img_url}/>
+        <div class="card-body">
+          <h4 className = "card-header">Name: {name}</h4>
+          <p class="card-text" >Description: {description}</p>
+          <p class="card-text" >Abilities: {abilities}</p>
+          <p class="card-text" >Rank: {rank}</p>
+        </div>
         <div>
-          <button onClick = {handleDeleteHero}>DELETE Hero</button>
+          <button className = "btn btn-danger" onClick = {handleDeleteHero}>DELETE Hero</button>
         </div>
      </div>
     );

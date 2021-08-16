@@ -63,7 +63,7 @@ function HeroForm( {onAddHero, leagueId} ) {
             <input name = "abilities" placeholder = "Abilities"  value = {formData.abilities} onChange = {handleChange}></input>
             <input name = "rank" placeholder = "Rank"  value = {formData.rank} onChange = {handleChange}></input>
             <input name = "img" placeholder = "Img Url"  value = {formData.img} onChange = {handleChange}></input>
-            <button> Sign Up </button>
+            <button className = "btn btn-primary"> Sign Up </button>
         </form>
      </div>
     );

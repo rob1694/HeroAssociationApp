@@ -1,4 +1,5 @@
 import React from 'react'
+import './IndividualLeague.css'
 import HeroForm from './HeroForm';
 import HeroCard from './HeroCard';
 import { useState, useEffect } from 'react'
@@ -49,13 +50,14 @@ function IndividualLeagues( {league, deleteLeague} ) {
 
 
   return (
-    <div>
-      <img alt = {name} src = {img_url} />
+    <div class="text-white bg-dark">
+      <img class = "logo" alt = {name} src = {img_url} />
       <h3>{name}</h3>
       <p>{description}</p>
-      <img alt = {name} src = {img_url} />
-      <button onClick = {handleDeleteLeague}>DELETE League</button>
-      
+      <img class = "logo" alt = {name} src = {img_url} />
+      <div>
+        <button className = "btn btn-danger" onClick = {handleDeleteLeague}>DELETE League</button>
+      </div>
       <HeroForm onAddHero = {addHero} leagueId = {id}/>
       {showHeroes}
    </div>

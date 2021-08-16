@@ -36,7 +36,7 @@ function LeagueContainer() {
           })
       }
 
-      // debug deleting heroes along with league when clicked
+      // debug deleting heroes along with league when league deleted
       // or create un unspecified League section of Heros
 
     return (

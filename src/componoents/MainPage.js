@@ -7,7 +7,7 @@ function MainPage() {
 
 
     return (
-        <div>
+        <div className = "container">
             <TitleContainer />
             <LeaguesContainer />
         </div>

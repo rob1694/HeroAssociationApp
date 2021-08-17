@@ -14,7 +14,7 @@ function handleDeleteHero() {
           <div class = "card col-sm-3 text-dark" >
             <img class="card-img-top" alt = {name} src = {img_url}/>
             <div class="card-body">
-              <h4 className = "card-header">Name: {name}</h4>
+              <h4 className = "card-header">{name}</h4>
               <p class="card-text" >Description: {description}</p>
               <p class="card-text" >Abilities: {abilities}</p>
               <p class="card-text" >Rank: {rank}</p>

@@ -42,7 +42,7 @@ function LeagueContainer() {
     return (
         <div>
             <LeagueForm onAddleague = {addLeague}/>
-            <h3>Current Leagues</h3>
+            <h3 class = "d-flex justify-content-center">Current Leagues</h3>
             {showLeagues}
         </div>
     )

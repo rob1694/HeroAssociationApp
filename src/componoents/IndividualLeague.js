@@ -51,17 +51,19 @@ function IndividualLeagues( {league, deleteLeague} ) {
 
   return (
     <div class="card p-4 m-4 text-white bg-dark">
-      <div class = "">
-        <img class = "d-flex-justify-content-start" alt = {name} src = {img_url} />
-        <img class = "d-flex-justify-content-end" alt = {name} src = {img_url} />
-      </div>
       <div class = "d-flex justify-content-end">
+        <img class = "logo" alt = {name} src = {img_url} />
       </div>
-      <div class = "d-flex justify-content-center">
-        <h2>{name}</h2>
+      <div class = "">
+        <img class = "logo" alt = {name} src = {img_url} />
       </div>
-      <div class = "d-flex justify-content-center">
-        <p>{description}</p>
+      <div class = "border border-light">
+        <div class = "d-flex justify-content-center ">
+          <h2>{name}</h2>
+        </div>
+        <div class = "d-flex justify-content-center">
+          <p>{description}</p>
+        </div>
       </div>
       <div>
         <button className = "btn btn-danger" onClick = {handleDeleteLeague}>DELETE League</button>

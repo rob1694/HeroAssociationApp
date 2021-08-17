@@ -55,7 +55,7 @@ function HeroForm( {onAddHero, leagueId} ) {
         }
 
     return (
-      <div>
+      <div class = "bg-light text-dark">
         <h4>Hero Sign Up Form</h4>
         <form onSubmit = {handleSubmit}>
             <input name = "name" placeholder = "Name"  value = {formData.name} onChange = {handleChange}></input>

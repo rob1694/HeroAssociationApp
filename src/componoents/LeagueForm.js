@@ -49,7 +49,7 @@ function clearForm() {
     
 
   return (
-      <div className = "container">
+      <div className = "container bg-secondary text-white">
           <h3>Register League</h3>  
             <form onSubmit = {handleSubmit}>
                <input name = "name" placeholder = "Name" value = {formData.name} onChange = {handleChange}/>
